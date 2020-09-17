@@ -21,7 +21,7 @@ namespace Ui.Data
                 new DogOwner
                 {
                     OwnerName ="Rob",
-                    Dogs =new List<Dog>{
+                    Dogs = new List<Dog>{
                             new Dog { DogName="Willow"},
                             new Dog { DogName="Nook"},
                             new Dog { DogName="Sox"},
@@ -35,34 +35,6 @@ namespace Ui.Data
                         new Dog{ DogName="adog"}
                     }
                 }
-
-
-                //new DogOwner
-                //{
-                //    OwnerName = "Rob",
-                //    DogName = "Willow"
-                //},
-                // new DogOwner
-                //{
-                //    OwnerName = "Rob",
-                //    DogName = "Nook"
-                //},
-                //  new DogOwner
-                //{
-                //    OwnerName = "Rob",
-                //    DogName = "Sox"
-                //},
-                //  new DogOwner
-                //{
-                //    OwnerName = "Hardeep",
-                //    DogName = "A"
-                //}
-                //  ,
-                //  new DogOwner
-                //{
-                //    OwnerName = "Hardeep",
-                //    DogName = "B"
-                //}
             };
 
             return dogOwnerList;

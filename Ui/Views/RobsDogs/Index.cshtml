@@ -36,6 +36,14 @@
 		<tr>
 			<td>@dogOwner.OwnerName</td>
             <td> @(string.Join(", ", dogOwner.DogNames)) </td>
+            @*<td>
+                <ul>
+                    @foreach (var dog in dogOwner.DogNames)
+                    {
+                        <li> @dog </li>
+                    }
+                </ul>
+            </td>*@
 		</tr>
         }
     }
