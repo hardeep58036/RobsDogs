@@ -30,11 +30,14 @@
 	</thead>
 	<tbody>
 	@foreach (var dogOwner in Model.DogOwnerViewModels)
-	{
+    {
+        if (dogOwner.DogNames.Count > 0)
+        {
 		<tr>
 			<td>@dogOwner.OwnerName</td>
-			<td>@dogOwner.DogNames.Single()</td>
+            <td> @(string.Join(", ", dogOwner.DogNames)) </td>
 		</tr>
-	}
+        }
+    }
 	</tbody>
 </table>

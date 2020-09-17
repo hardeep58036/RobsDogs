@@ -4,14 +4,23 @@ using Ui.Entities;
 
 namespace Ui.Services
 {
-	public class DogOwnerService
-	{
-		public List<DogOwner> GetAllDogOwners()
-		{
-			var dogOwnerRepository = new DogOwnerRepository();
-			var dogOwnerList = dogOwnerRepository.GetAllDogOwners();
+    public interface IDogOwnerService
+    {
+        List<DogOwner> GetAllDogOwners();
+    }
 
-			return dogOwnerList;
-		}
+    public class DogOwnerService : IDogOwnerService
+    {
+        private readonly IDogOwnerRepository _dogOwnerRepository;
+
+        public DogOwnerService(IDogOwnerRepository dogOwnerRepository)
+        {
+            _dogOwnerRepository = dogOwnerRepository;
+        }
+
+        public List<DogOwner> GetAllDogOwners()
+		{
+            return _dogOwnerRepository.GetAllDogOwners();
+        }
 	}
 }
